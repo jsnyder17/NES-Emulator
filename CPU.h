@@ -54,10 +54,20 @@ class CPU {
         uint8_t TAX(); uint8_t TAY(); uint8_t TSX(); uint8_t TXA(); uint8_t TXS(); uint8_t TYA();
         uint8_t NAH();
 
+        // We bussin 
         void writeBus(uint16_t address, uint8_t data);     // Functioin to write data to the bus
         uint16_t readBus(uint16_t address);                 // Function to read data from the bus from the specified address 
 
+        // Instruction set matrix 
         instruction_t instructionTable[16][16];     // Just wait until you get to read the .cpp file :) 
 
+        // Registers 
+        uint8_t reg_X;
+        uint8_t reg_Y;
+        uint8_t reg_A;
+        uint8_t r_PS;
+        uint16_t r_PC;
+
+        // Pointer to the bus instance 
         Bus *bus;
 };
