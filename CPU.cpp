@@ -1,7 +1,9 @@
 #include "CPU.h"
 
-CPU::CPU() 
+CPU::CPU(Bus &bus) 
 {   
+    this->bus = bus;
+    
     instructionTable[0x00][0x00] = { "BRK", 2, 8, IMPLIED, &BRK};       instructionTable[0x00][0x01] = { "ORA", 2, 6, INDIRECT, &ORA };           instructionTable[0x00][0x02] = { "NAH", 0, 0, CRINGE, &NAH };             instructionTable[0x00][0x03] = { "NAH", 0, 0, CRINGE, &NAH };         instructionTable[0x00][0x04] = { "NAH", 0, 0, CRINGE, &NAH };         instructionTable[0x00][0x05] = { "ORA", 2, 3, ZEROPAGE, &ORA };           instructionTable[0x00][0x06] = { "ASL", 2, 5, ZEROPAGE, &ASL };
     instructionTable[0x01][0x00] = { "BPL", 2, 2, RELATIVE, &BPL };     instructionTable[0x01][0x01] = { "ORA", 2, 5, INDIRECT_Y, &ORA };         instructionTable[0x01][0x02] = { "NAH", 0, 0, CRINGE, &NAH };             instructionTable[0x01][0x03] = { "NAH", 0, 0, CRINGE, &NAH };         instructionTable[0x01][0x04] = { "NAH", 0, 0, CRINGE, &NAH };         instructionTable[0x01][0x05] = { "ORA", 2, 4, ZEROPAGE_X, &ORA };         instructionTable[0x01][0x06] = { "ASL", 2, 6, ZEROPAGE_X, &ASL };
     instructionTable[0x02][0x00] = { "JSR", 3, 6, ABSOLUTE, &JSR};      instructionTable[0x02][0x01] = { "AND", 2, 6, X_INDIRECT, &AND };         instructionTable[0x02][0x02] = { "NAH", 0, 0, CRINGE, &NAH };             instructionTable[0x02][0x03] = { "NAH", 0, 0, CRINGE, &NAH };         instructionTable[0x02][0x04] = { "BIT", 2, 3, ZEROPAGE, &BIT };       instructionTable[0x02][0x05] = { "AND", 2, 3, ZEROPAGE, &AND };           instructionTable[0x02][0x06] = { "ROL", 2, 6, ZEROPAGE, &ROL }; 
