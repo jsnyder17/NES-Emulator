@@ -1,6 +1,6 @@
 class Cartridge {
     public:
-        Catridge();
+        Cartridge();
         virtual ~Cartridge();
 
         Bus *bus;

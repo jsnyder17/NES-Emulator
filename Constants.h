@@ -1,3 +1,5 @@
+#include <stdint.h>
+
 // Address constants 
 const uint16_t ADDR_MEM_BASE = 0x0000;
 const uint16_t ADDR_MEM_MAX = 0x07FF;

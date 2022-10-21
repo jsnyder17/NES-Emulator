@@ -28,13 +28,13 @@ typedef struct instruction {
     uint8_t numbytes;           // the number of bytes the instruction uses
     uint8_t numcycles;          // the number of cycles it takes for the instruction to complete
     aMode addressingMode;       // the addressing mode used by the cycle
-    uint8_t(*operation)();      // function pointer to the appropriate opcode function 
+    uint8_t(CPU::*operation)();      // function pointer to the appropriate opcode function 
 
 } instruction_t;
 
 class CPU {
     public:
-        CPU(Bus &bus);
+        CPU(Bus *bus);
         virtual ~CPU();
 
         // BEHOLD! FUNCTIONS!

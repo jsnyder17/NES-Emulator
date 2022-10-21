@@ -4,4 +4,4 @@ class APU {
         virtual ~APU();
 
         Bus *bus;
-}
+};
