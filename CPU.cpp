@@ -556,3 +556,116 @@ uint8_t CPU::SBC()
 
     return 0;
 }
+
+uint8_t CPU::SEC() 
+{
+    // only addressing mode is implied
+
+    return 0;
+}
+
+uint8_t CPU::SED()
+{
+    // only addressing mode is implied
+
+    return 0;
+}
+
+uint8_t CPU::SEI()
+{
+    // only addressing mode is implied
+
+    return 0;
+}
+
+uint8_t CPU::STA()
+{
+    swtich (currInstruction.addressingMode) {
+        case aMode::ZEROPAGE:
+            break;
+        case aMode::ZEROPAGE_X:
+            break;
+        case aMode::ABSOLUTE:
+            break;
+        case aMode::ABS_X:
+            break;
+        case aMode::ABS_Y:
+            break;
+        case aMode::INDIRECT_X:
+            break;
+        case aMode::INDIRECT_Y:
+            break;
+    }
+
+    return 0;
+}
+
+uint8_t CPU::STX() 
+{
+    switch (currInstruction.addressingMode) {
+        case aMode::ZEROPAGE:
+            break;
+        case aMode::ZEROPAGE_Y:
+            break;
+        case aMode::ABSOLUTE:
+            break;
+    }
+
+    return 0;
+}
+
+uint8_t CPU::STY() 
+{
+    switch (currInstruction.addressingMode) {
+        case aMode::ZEROPAGE:
+            break;
+        case aMode::ZEROPAGE_X:
+            break;
+        case aMode::ABSOLUTE:
+            break;
+    }
+
+    return 0;
+}
+
+uint8_t CPU::TAX() 
+{
+    // only addressing mode is implied
+
+    return 0;
+}
+
+uint8_t CPU::TAY() 
+{
+    // only addressing mode is implied
+
+    return 0;
+}
+
+uint8_t CPU::TSX()
+{
+    // only addressing mode is implied
+
+    return 0;
+}
+
+uint8_t CPU::TXA()
+{
+    // only addressing mode is implied
+
+    return 0;
+}
+
+uint8_t CPU::TXS()
+{
+    // only addressing mode is implied
+
+    return 0;
+}
+
+uint8_t CPU::TYA()
+{
+    // only addressing mode is implied
+
+    return 0;
+}
