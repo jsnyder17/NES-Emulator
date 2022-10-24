@@ -22,3 +22,239 @@ CPU::CPU(Bus *bus)
     instructionTable[0x0E][0x00] = { "CPX", 2, 2, aMode::IMMEDIATE, &CPX };    instructionTable[0x0E][0x01] = { "SBC", 2, 6, aMode::INDIRECT, &SBC };           instructionTable[0x0E][0x02] = { "NAH", 0, 0, aMode::CRINGE, &NAH };             instructionTable[0x0E][0x03] = { "NAH", 0, 0, aMode::CRINGE, &NAH };         instructionTable[0x0E][0x04] = { "CPX", 2, 3, aMode::ZEROPAGE, &CPX };       instructionTable[0x0E][0x05] = { "SBC", 2, 3, aMode::ZEROPAGE, &SBC };           instructionTable[0x0E][0x06] = { "INC", 2, 5, aMode::ZEROPAGE, &INC };           instructionTable[0x0E][0x07] = { "NAH", 0, 0, aMode::CRINGE, &NAH };           instructionTable[0x0E][0x08] = { "INX", 1, 2, aMode::IMPLIED, &INX };          instructionTable[0x0E][0x09] = { "SBC", 2, 2, aMode::IMMEDIATE, &SBC };        instructionTable[0x0E][0x0A] = { "NOP", 1, 2, aMode::IMPLIED, &NOP };          instructionTable[0x0E][0x0B] = { "NAH", 0, 0, aMode::CRINGE, &NAH };       instructionTable[0x0E][0x0C] = { "CPX", 3, 4, aMode::ABSOLUTE, &CPX };         instructionTable[0x0E][0x0D] = { "SBC", 3, 4, aMode::ABSOLUTE, &SBC };       instructionTable[0x0E][0x0E] = { "INC", 3, 6, aMode::ABSOLUTE, &INC };          instructionTable[0x0E][0x0F] = { "NAH", 0, 0, aMode::CRINGE, &NAH };
     instructionTable[0x0F][0x00] = { "BEQ", 2, 2, aMode::RELATIVE, &BEQ };     instructionTable[0x0F][0x01] = { "SBC", 2, 5, aMode::INDIRECT_Y, &SBC };         instructionTable[0x0F][0x02] = { "NAH", 0, 0, aMode::CRINGE, &NAH };             instructionTable[0x0F][0x03] = { "NAH", 0, 0, aMode::CRINGE, &NAH };         instructionTable[0x0F][0x04] = { "NAH", 0, 0, aMode::CRINGE, &NAH };         instructionTable[0x0F][0x05] = { "SBC", 2, 4, aMode::ZEROPAGE_X, &SBC };         instructionTable[0x0F][0x06] = { "INC", 2, 6, aMode::ZEROPAGE_X, &INC };         instructionTable[0x0F][0x07] = { "NAH", 0, 0, aMode::CRINGE, &NAH };           instructionTable[0x0F][0x08] = { "SED", 1, 2, aMode::IMPLIED, &SED };          instructionTable[0x0F][0x09] = { "SBC", 3, 4, aMode::ABS_Y, &SBC };            instructionTable[0x0F][0x0A] = { "NAH", 0, 0, aMode::CRINGE, &NAH };           instructionTable[0x0F][0x0B] = { "NAH", 0, 0, aMode::CRINGE, &NAH };       instructionTable[0x0F][0x0C] = { "NAH", 0, 0, aMode::CRINGE, &NAH };           instructionTable[0x0F][0x0D] = { "SBC", 3, 4, aMode::ABS_X, &SBC };          instructionTable[0x0F][0x0E] = { "INC", 3, 7, aMode::ABS_X, &INC };             instructionTable[0x0F][0x0F] = { "NAH", 0, 0, aMode::CRINGE, &NAH };
 }
+
+uint8_t CPU::ADC()
+{
+    switch(currInstruction.addressingMode) {
+        case aMode::IMMEDIATE:
+            break;
+        case aMode::ZEROPAGE:
+            break;
+        case aMode::ZEROPAGE_X:
+            break;
+        case aMode::ABSOLUTE:
+            break;
+        case aMode::ABS_X:
+            break;
+        case aMode::ABS_Y:
+            break;
+        case aMode::INDIRECT_X:
+            break;
+        case aMode::INDIRECT_Y:
+            break;
+    }
+
+    return 0;
+}
+
+uint8_t CPU::AND() {
+    switch (currInstruction.addressingMode) {
+        case aMode::IMMEDIATE:
+            break;
+        case aMode::ZEROPAGE:
+            break;
+        case aMode::ZEROPAGE_X:
+            break;
+        case aMode::ABSOLUTE:
+            break;
+        case aMode::ABS_X:
+            break;
+        case aMode::ABS_Y:
+            break;
+        case aMode::INDIRECT_X:
+            break;
+        case aMode::INDIRECT_Y:
+            break;
+    }
+
+    return 0;
+}
+
+uint8_t CPU::ASL() 
+{
+    switch (currInstruction.addressingMode) {
+        case aMode::ACCUMULATOR:
+            break;
+        case aMode::ZEROPAGE:  
+            break;
+        case aMode::ZEROPAGE_X:
+            break;
+        case aMode::ABSOLUTE:
+            break;
+        case aMode::ABS_X:
+            break;
+    }
+
+    return 0;
+}
+
+uint8_t CPU::BCC() 
+{
+    // only addressing mode is relative 
+
+    return 0;
+}
+
+uint8_t CPU::BCS() 
+{
+    // only addressing mode is relative 
+
+    return 0;
+}
+
+uint8_t CPU::BEQ()
+{
+    // only addressing mode is relative 
+
+    return 0;
+}
+
+uint8_t CPU::BIT() 
+{
+    switch (currInstruction.addressingMode) {
+        case aMode::ZEROPAGE:
+            break;
+        case aMode::ABSOLUTE:
+            break;
+    }
+
+    return 0;
+}
+
+uint8_t CPU::BMI()
+{
+    // only addressing mode is relative
+
+    return 0;
+}
+
+uint8_t CPU::BNE() 
+{
+    // only addressing mode is relative
+
+    return 0;
+}
+
+uint8_t CPU::BPL() 
+{
+    // only addressing mode is relative
+
+    return 0;
+}
+
+uint8_t CPU::BRK() 
+{
+    // only addressing mode is implied
+
+    return 0;
+}
+
+uint8_t CPU::BVC() 
+{
+    // only addressing mode is relative
+
+    return 0;
+}
+
+uint8_t CPU::BVS() 
+{
+    // only addressing mode is relative
+
+    return 0;
+}
+
+uint8_t CPU::CLC() 
+{
+    // only addressing mode is implied
+
+    return 0;
+}
+
+uint8_t CPU::CLD() 
+{
+    // only addressing mode is implied
+
+    return 0;
+}
+
+uint8_t CPU::CLI()
+{
+    // only addressing mode is implied
+
+    return 0;
+}
+
+uint8_t CPU::CLV()
+{
+    // only addressing mode is implied
+
+    return 0;
+}
+
+uint8_t CPU::CMP() 
+{
+    switch (currInstruction.addressingMode) {
+        case aMode::IMMEDIATE:
+            break;
+        case aMode::ZEROPAGE:
+            break;
+        case aMode::ZEROPAGE_X:
+            break;
+        case aMode::ABSOLUTE:
+            break;
+        case aMode::ABS_X:
+            break;
+        case aMode::ABS_Y:
+            break;
+        case aMode::INDIRECT_X:
+            break;
+        case aMode::INDIRECT_Y:
+            break;
+    }
+
+    return 0;
+}
+
+uint8_t CPU::CPX() 
+{
+    switch (currInstruction.addressingMode) {
+        case aMode::IMMEDIATE:
+            break;
+        case aMode::ZEROPAGE:
+            break;
+        case aMode::ABSOLUTE:
+            break;
+    }
+
+    return 0;
+}
+
+uint8_t CPU::CPY()
+{
+    switch (currInstruction.addressingMode) {
+        case aMode::IMMEDIATE:
+            break;
+        case aMode::ZEROPAGE:
+            break;
+        case aMode::ABSOLUTE:
+            break;
+    }
+
+    return 0;
+}
+
+uint8_t CPU::DEC() 
+{
+    switch (currInstruction.addressingMode) {
+        case aMode::ZEROPAGE:
+            break;
+        case aMode::ZEROPAGE_X:
+            break;
+        case aMode::ABSOLUTE:
+            break;
+        case aMode::ABS_X:
+            break;
+    }
+
+    return 0;
+}

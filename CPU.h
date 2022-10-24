@@ -70,4 +70,7 @@ class CPU {
 
         // Pointer to the bus instance 
         Bus *bus;
+
+        // Current instruction
+        instruction_t currInstruction;
 };
