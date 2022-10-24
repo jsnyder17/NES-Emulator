@@ -258,3 +258,301 @@ uint8_t CPU::DEC()
 
     return 0;
 }
+
+uint8_t CPU::DEX() 
+{
+    // only addressing mode is implied
+
+    return 0;
+}
+
+uint8_t CPU::DEY()
+{
+    // only addressing mode is implied
+
+    return 0;
+}
+
+uint8_t CPU::EOR()
+{
+    switch (currInstruction.addressingMode) {
+        case aMode::IMMEDIATE:
+            break;
+        case aMode::ZEROPAGE:
+            break;
+        case aMode::ZEROPAGE_X:
+            break;
+        case aMode::ABSOLUTE:
+            break;
+        case amode::ABS_X:
+            break;
+        case aMode::ABS_Y:
+            break;
+        case aMode::INDIRECT_X:
+            break;
+        case aMode::INDIRECT_Y:
+            break;
+    }
+
+    return 0;
+}
+
+uint8_t CPU::INC() 
+{
+    switch (currInstruction.addressingMode) {
+        case aMode::ZEROPAGE:
+            break;
+        case aMode::ZEROPAGE_X:
+            break;
+        case aMode::ABSOLUTE:
+            break;
+        case aMode::ABS_X:
+            break;
+    }
+
+    return 0;
+}
+
+uint8_t CPU::INX() 
+{
+    // only addressing mode is implied 
+
+    return 0;
+}
+
+uint8_t CPU::INY() 
+{
+    // only addressing mode is implied
+
+    return 0;
+}
+
+uint8_t CPU::JMP()
+{
+    switch (currInstruction.addressingMode) {
+        case aMode::ABSOLUTE:
+            break;
+        case aMode::INDIRECT:
+            break;
+    }
+
+    return 0;
+}
+
+uint8_t CPU::JSR() 
+{
+    // only addressing mode is absolute
+    
+    return 0;
+}
+
+uint8_t CPU::LDA() 
+{
+    switch (currInstruction.addressingMode) {
+        case aMode::IMMEDIATE:
+            break;
+        case aMode::ZEROPAGE:
+            break;
+        case aMode::ZEROPAGE_X:
+            break;
+        case aMode::ABSOLUTE:
+            break;
+        case aMode::ABS_X:
+            break;
+        case aMode::ABS_Y:
+            break;
+        case aMode::INDIRECT_X:
+            break;
+        case aMode::INDIRECT_Y:
+            break;
+    }
+
+    return 0;
+}
+
+uint8_t CPU::LDX() 
+{
+    switch (currInstruction.addressingMode) {
+        case aMode::IMMEDIATE:
+            break;
+        case aMode::ZEROPAGE:
+            break;
+        case aMode::ZEROPAGE_Y:
+            break;
+        case aMode::ABSOLUTE:
+            break;
+        case aMode::ABSOLUTE_Y:
+            break;
+    }
+
+    return 0;
+}
+
+uint8_t CPU::LDY() 
+{
+    switch (currInstruction.addressingMode) {
+        case aMode::IMMEDIATE:
+            break;
+        case aMode::ZEROPAGE:
+            break;
+        case aMode::ZEROPAGE_X:
+            break;
+        case aMode::ABSOLUTE:
+            break;
+        case aMode::ABS_X:
+            break;
+    }
+
+    return 0;
+}
+
+uint8_t CPU::LSR() 
+{
+    switch (currInstruction.addressingMode) {
+        case aMode::ACCUMULATOR:
+            break;
+        case aMode::ZEROPAGE:
+            break;
+        case aMode::ZEROPAGE_X:
+            break;
+        case aMode::ABSOLUTE:
+            break;
+        case aMode::ABS_X:
+            break;
+    }
+
+    return 0;
+}
+
+uint8_t CPU::NOP()
+{
+    // only addressing mode is implied
+
+    return 0;
+}
+
+uint8_t CPU::ORA()
+{
+    switch (currInstruction.addressingMode) {
+        case aMode::IMMEDIATE:
+            break;
+        case aMode::ZEROPAGE:
+            break;
+        case aMode::ZEROPAGE_X:
+            break;
+        case aMode::ABSOLUTE:
+            break;
+        case aMode::ABS_X:
+            break;
+        case aMode::ABS_Y:
+            break;
+        case aMode::INDIRECT_X:
+            break;
+        case aMode::INDIRECT_Y:
+            break;
+    }
+
+    return 0;
+}
+
+uint8_t CPU::PHA() 
+{
+    // only addressing mode is implied
+
+    return 0;
+}
+
+uint8_t CPU::PHP() 
+{
+    // only addressing mode is implied
+
+    return 0;
+}
+
+uint8_t CPU::PLA() 
+{
+    // only addressing mode is implied
+
+    return 0;
+}
+
+uint8_t CPU::PLP()
+{
+    // only addressing mode is implied
+
+    return 0;
+}
+
+uint8_t CPU::ROL() 
+{
+    switch (currInstruction.addressingMode) {
+        case aMode::ACCUMULATOR:
+            break;
+        case aMode::ZEROPAGE:
+            break;
+        case aMode::ZEROPAGE_X:
+            break;
+        case aMode::ABSOLUTE:
+            break;
+        case aMode::ABS_X:
+            break;
+    }
+
+    return 0;
+}
+
+uint8_t CPU::ROR()
+{
+    switch (currInstruction.addressingMode) {
+        case aMode::ACCUMULATOR:
+            break;
+        case aMode::ZEROPAGE:
+            break;
+        case aMode::ZEROPAGE_X:
+            break;
+        case aMode::ABSOLUTE:
+            break;
+        case aMode::ABS_X:
+            break;
+    }
+
+    return 0;
+}
+
+uint8_t CPU::RTI() 
+{
+    // only addressing mode is implied
+
+    return 0;
+}
+
+uint8_t CPU::RTS() 
+{
+    // only addressing mode is implied
+
+    return 0;
+}
+
+uint8_t CPU::SBC()
+{
+    switch (currInstruction.addressingMode) {
+        case aMode::IMMEDIATE:
+            break;
+        case aMode::ZEROPAGE:
+            break;
+        case aMode::ZEROPAGE_X:
+            break;
+        case aMode::ABSOLUTE:
+            break;
+        case aMode::ABSOLUTE_X:
+            break;
+        case aMode::ABSOLUTE_Y:
+            break;
+        case aMode::INDIRECT_X:
+            break;
+        case aMode::INDIRECT_Y:
+            break;
+    }
+
+    return 0;
+}
