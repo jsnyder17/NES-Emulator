@@ -1,3 +1,8 @@
+#ifndef APU_H
+#define APU_H
+
+#include "Bus.h"
+
 class APU {
     public:
         APU();
@@ -5,3 +10,5 @@ class APU {
 
         Bus *bus;
 };
+
+#endif

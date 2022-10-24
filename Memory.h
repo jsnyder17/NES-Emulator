@@ -1,3 +1,8 @@
+#ifndef MEMORY_H
+#define MEMORY_H
+
+#include "Bus.h"
+
 class Memory  {
     public:
         Memory();
@@ -5,3 +10,5 @@ class Memory  {
 
         Bus *bus;
 };
+
+#endif

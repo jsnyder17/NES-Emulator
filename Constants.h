@@ -1,3 +1,6 @@
+#ifndef CONSTANTS_H
+#define CONSTANTS_H
+
 #include <stdint.h>
 
 // Address constants 
@@ -35,3 +38,5 @@ const uint16_t ADDR_MEM_MIRROR3_MAX = 0x1FFF;
 
 const uint16_t ADDR_PPU_MIRROR_BASE = 0x2008;
 const uint16_t ADDR_PPU_MIRROR_MAX = 0x3FFF;
+
+#endif
